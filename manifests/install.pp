@@ -54,14 +54,14 @@ class zfs::install {
           #}
 
           apt::source { 'zfsonlinux':
-            location    => 'http://archive.zfsonlinux.org/debian',
+            location    => 'http://download.zfsonlinux.org/debian',
             repos       => 'main',
             key         => '4D5843EA',
             include_src => false,
           }
 
           apt::pin { 'zfsonlinux':
-            originator => 'archive.zfsonlinux.org',
+            originator => 'download.zfsonlinux.org',
             priority   => 1001,
           }
 
